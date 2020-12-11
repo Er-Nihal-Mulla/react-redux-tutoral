@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: sans-serif;
+}
+.container {
+  width: 700px;
+  margin: 30px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.group {
+  margin: 10px 0;
+}
+.control {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid silver;
+  outline: none;
+}
+.btn {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  padding: 12px 10px;
+  color: #fff;
+}
+.btn-default {
+  background: rgb(2, 99, 243);
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 15px;
+}
+.row {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  margin-top:12px;
+  flex-wrap: wrap;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name {
+  width: 30%;
+}
+.address {
+  width: 40%;
+}
+.user-btn {
+  width: 30%; 
+}
+.btn-danger{
+  background: red;
+  border-radius: 15px;
 }

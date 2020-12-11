@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Helmet} from 'react-helmet'
+import "./App.css";
+import { Provider } from "react-redux";
+import store from "../src/store/reducers/index"
+import Users from './Users'
+import Form from './store/reducers/Form';
+
+
+const TITLE= "Redux-Basic"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Provider store={store}>
+    <Helmet>
+      <title>{TITLE}</title>
+    </Helmet>
+    <div className="container">
+    <Form/>
+    <Users/>
     </div>
+
+    </Provider>
   );
 }
 
